@@ -1,0 +1,37 @@
+<!-- templates/index.html -->
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+
+<html lang="{{ LANGUAGE_CODE }}" data-lang="{{ LANGUAGE_CODE }}">
+
+<button id="langButton">{% trans "Lang" %}</button>
+
+<h2>{% block page_title %}Welcome to Timetable App{% endblock %}</h2>
+
+<div id="datetime"></div>
+
+<form>
+    <label for="facultySelect">{% trans "Faculty" %}:</label>
+    <select id="facultySelect"></select>
+
+    <label for="groupSelect">{% trans "Group" %}:</label>
+    <select id="groupSelect"></select>
+
+</form>
+<div class="buttons-container">
+    <div class="action-buttons">
+        <button class="button" onclick="showCurrentClass()">{% trans "Current Class" %}</button>
+        <button class="button" onclick="showNextClass()">{% trans "Next Class" %}</button>
+        <button class="button" onclick="showClassesToday()">{% trans "Today's Classes" %}</button>
+        <button class="button" onclick="showClassesTomorrow()">{% trans "Tomorrow's Classes" %}</button>
+        <button class="button" onclick="showWeeklySchedule()">{% trans "All Classes for the Week" %}</button>
+    </div>
+</div>
+
+
+<div id="classTable"></div>
+
+<script src="{% static 'timetable/scripts.js' %}"></script>
+{% endblock %}

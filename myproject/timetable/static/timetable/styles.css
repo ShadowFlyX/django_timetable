@@ -1,0 +1,127 @@
+/* static/timetable/styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(to bottom, #3498db, #2980b9); /* Градиентный фон синего цвета */
+    color: white;
+    padding: 1em;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Затемнение фона для лучшей читаемости текста */
+header::after {
+    content: '';
+    background: rgba(0, 0, 0, 0.3); /* Прозрачный тёмный цвет */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    margin-top: auto;
+}
+
+button {
+    padding: 12px;
+    margin: 5px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.action-buttons button {
+    padding: 12px;
+    margin: 5px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#lang-button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+#datetime {
+    min-width: fit-content;
+    max-width: max-content;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #3498db;
+    border-radius: 20px;
+    font-size: 28px;
+    color: #3498db; /* Голубой цвет, замените на ваш основной цвет сайта */
+}
+
+
+.class-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.class-table th, .class-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.class-table th {
+    background-color: #f2f2f2;
+}
+
+.class-table td:first-child {
+    width: 50%;
+}
